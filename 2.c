@@ -2,8 +2,9 @@
 #include <ctype.h>
 int main(void) {
     char a;
-    int k = 0, i = 0;
+    int k = 0, i = 0, t = 0;
     while((a = getchar()) != EOF) {
+        t++;
         if(isdigit(a)) {
             i++;
         } else if(i == 3) {
@@ -14,6 +15,6 @@ int main(void) {
             
         }
     }
-    printf("%d\n", k); 
+    printf("%d %d\n", k, t); 
     return 0;
 }
