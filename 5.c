@@ -6,11 +6,17 @@ int rec(int a) {
         return a + rec(a - 1);
     }
 }
+int iter(int a) {
+    int sum = 0;
+    for(int i = 0; i <= a; i++) {
+        sum += i;
+    } 
+    return sum;
+}
 int main(void) {
     int a;
     while(scanf("%d", &a)==1) {
-        int tr = (a * (a + 1)) / 2;
-        printf("%d\n", tr);
+        printf("%d\n", iter(a));
     }
     int b;
     while(scanf("%d", &b)==1) {
